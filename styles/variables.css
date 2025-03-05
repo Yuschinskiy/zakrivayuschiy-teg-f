@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--main-font-family: 'Inter-Variable';
+--alt-font-family: 'PressStart2P-Regular';
+--main-font-size: 18px;
+--main-font-weight: 400;
+--font-weight-regular: 400;
+--font-weight-bold: 700;
+--color-bg: rgba(255, 255, 255, 1);
+--color-main: rgba(0, 0, 0, 1);
+--text-stroke-color: #fff;
+--page-width: clamp(20rem, 13.214rem + 33.928vw, 43.75rem);
+--card-font-size: 1.125rem;
+--card-paragraph-margin-block-end: 27px;
+--card-margin-block-end: 50px;
+--card-content-padding: 25px;
+--header-padding: clamp(7.5rem, 7.323rem + 0.751vw, 8rem) 0;
+--header-margin-block: 100px;
+--header-heading: clamp(3.062rem, 2.71rem + 1.5vw, 4.06rem);
+--header-title-margin-block-end: 20px;
+--header-subheading: clamp(0.875rem, 0.676rem + 0.845vw, 1.437rem);
+--save-button-inline-size: clamp(19.125rem, 18.486rem + 2.723vw, 20.937rem);
+--heart-main-color: #ff0000;
+--heart-contour-color: #000;
+--heart-sparks-color: #ff0000;
+}
