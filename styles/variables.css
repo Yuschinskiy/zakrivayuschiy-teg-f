@@ -9,18 +9,46 @@
 --color-bg: rgba(255, 255, 255, 1);
 --color-main: rgba(0, 0, 0, 1);
 --text-stroke-color: #fff;
---page-width: clamp(20rem, 13.214rem + 33.928vw, 43.75rem);
+--page-width: clamp(23.063rem, 15.948rem + 30.52vw, 43.375rem);
 --card-font-size: 1.125rem;
 --card-paragraph-margin-block-end: 27px;
 --card-margin-block-end: 50px;
 --card-content-padding: 25px;
 --header-padding: clamp(7.5rem, 7.323rem + 0.751vw, 8rem) 0;
 --header-margin-block: 100px;
---header-heading: clamp(3.062rem, 2.71rem + 1.5vw, 4.06rem);
+--header-heading: clamp(3.063rem, 2.712rem + 1.5vw, 4.063rem);
 --header-title-margin-block-end: 20px;
 --header-subheading: clamp(0.875rem, 0.676rem + 0.845vw, 1.437rem);
 --save-button-inline-size: clamp(19.125rem, 18.486rem + 2.723vw, 20.937rem);
 --heart-main-color: #ff0000;
 --heart-contour-color: #000;
 --heart-sparks-color: #ff0000;
+--bg-image:  repeating-linear-gradient(
+  to right,
+  #d3d3d3 0 2px,
+  rgb(211 211 211 / 0) 2px 4px
+),
+repeating-linear-gradient(
+  to bottom,
+  #d3d3d3 0 2px,
+  rgb(211 211 211 / 0) 2px 4px
+),
+repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}
+
+@media (max-width: 425px) {
+  :root {
+    --page-width: 100vw;
+  }
+}
+
+@media (width < 375px) {
+  :root {
+    --header-heading: clamp(
+      1.875rem,
+      -5.0341rem + 34.5455vw,
+      3.0625rem
+    );
+    --save-button-inline-size: min-content;
+  }
 }
