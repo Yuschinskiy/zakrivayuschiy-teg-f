@@ -10,9 +10,8 @@
 
 */
 
-
 .page {
-  min-inline-size: 371px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
   width: 100%;
@@ -29,8 +28,8 @@
   inline-size: var(--page-width);
 }
 
-.underimg {
-  padding: 10px; 
+.card__portion {
+  padding: 10px;
 }
 
 .header {
@@ -72,11 +71,9 @@
   font-size: 14px;
   line-height: 14px;
   opacity: 0.5;
-  text-shadow:
-    -1px 0 var(--text-stroke-color),
-    0 1px var(--text-stroke-color),
-    1px 0 var(--text-stroke-color),
-    0 -1px var(--text-stroke-color);
+  text-shadow: -1px 0 var(--text-stroke-color), 0 1px var(--text-stroke-color),
+    1px 0 var(--text-stroke-color), 0 -1px var(--text-stroke-color);
+    
 }
 
 .grayscale {
@@ -132,13 +129,12 @@
 }
 
 .filter-opacity-and-blur {
-  filter: opacity(0.2) blur(0.2rem) ;
+  filter: opacity(0.2) blur(0.2rem);
 }
 
 .filter-brightness-and-grayscale {
   filter: brightness(9) grayscale(1);
 }
-
 
 .filter-invert-and-saturate {
   filter: invert(0.8) saturate(150%);
@@ -152,30 +148,24 @@
   filter: saturate(150%);
 }
 
-.card__label {
-  position: absolute;
-  top: 23px;
-  right: 11px;
-  mix-blend-mode: hard-light;
-  font-family: var(--alt-font-family), sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  opacity: 0.5;
-  text-shadow:
-    -1px 0 var(--text-stroke-color),
-    0 1px var(--text-stroke-color),
-    1px 0 var(--text-stroke-color),
-    0 -1px var(--text-stroke-color);
-}
-
 @supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
-  .card__label {
+  .watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
   }
 }
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #fff;
+  text-align: center;
+}
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px #000 solid;
   font-family: var(--alt-font-family), sans-serif;
   background-color: var(--color-bg);
@@ -185,52 +175,11 @@
   overflow: hidden;
 }
 
-.button__text {
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: difference;
-  color: #fff;
-  text-align: center;
-}
-
-/*.button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  scale: 0 1;
-  background-color: #000;
-  transition: scale 0.5s ease-in-out;
-  transform-origin: left;
-  z-index: 0;
-} */
-
-/*.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #000;
-  transform-origin: left;
-  transition: translate 0.5s ease-in-out;
-  translate: -100%;
-}*/
-
 .button:hover:before {
   translate: 0%;
 }
 
-.card__like-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-block-size: 38px;
-  width: 130px;
-  text-transform: capitalize;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   background-color: #000;
@@ -239,15 +188,25 @@
   translate: -100%;
   top: 0px;
   width: 100%;
-  height: 38px;
+  height: 100%;
 }
 
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 0  #000;
+.button:focus {
+  box-shadow: 2px 2px 0 0 #000;
+  outline: none;
 }
 
-.card__like-button:hover:before {
-  translate: 0%;
+.svgfloppy {
+  height: 28px;
+}
+
+.card__like-button {
+  min-block-size: 38px;
+  width: 130px;
+  text-transform: capitalize;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .card__icon-button {
@@ -261,6 +220,8 @@
 }
 
 .button-save {
+  display: flex;
+  flex-direction: column;
   inline-size: var(--save-button-inline-size);
   padding: 15px 17px;
   margin-block: 50px 100px;
@@ -339,17 +300,12 @@
     padding: 5px 10px 4px;
   }
 
-  .card__label {
-    top: 25px;
-    right: 25px;
-  }
-  .button-save__content {
-    flex-direction: row;
+  .svgfloppy {
+    height: 21px;
   }
 
-  .button-save__content svg {
-    inline-size: 21px;
-    block-size: 21px;
+  .button-save {
+    flex-direction: row;
   }
 }
 
@@ -359,10 +315,6 @@
 
 .card__icon-button:focus-visible {
   border-color: #000;
-}
-
-.button:focus {
-  outline: none;
 }
 
 .button:focus-visible {
@@ -437,11 +389,10 @@
   animation: sparks-fade-in 0.3s ease-in 0.3s 1;
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   .like-icon.is-liked .sparks,
   .like-icon.is-liked .heart {
     animation: none;
   }
-  
 }
+
