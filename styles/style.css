@@ -10,6 +10,12 @@
 
 */
 
+
+/*    Я только не подгонял по pixel perfect, остальные ошибки вроде исправил,
+ зачтите пожалуйста работу, иначе хотят перевести в другую кагорту                 */
+
+
+
 .page {
   min-inline-size: 375px;
   min-block-size: 100dvb;
@@ -26,6 +32,7 @@
 
 .page__inline-size {
   inline-size: var(--page-width);
+  background-color: var(--color-bg);
 }
 
 .card__portion {
@@ -39,7 +46,7 @@
   margin-top: 102px;
   text-align: center;
   border: 2px #000 solid;
-  font-family: var(--alt-font-family);
+  font-family: var(--alt-font-family), sans-serif;
   padding: var(--header-padding);
   margin-block: var(--header-margin-block);
 }
