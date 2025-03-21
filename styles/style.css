@@ -11,13 +11,8 @@
 */
 
 
-/*    Я только не подгонял по pixel perfect, остальные ошибки вроде исправил,
- зачтите пожалуйста работу, иначе хотят перевести в другую кагорту                 */
-
-
-
 .page {
-  min-inline-size: 375px;
+  min-inline-size: 368px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
   width: 100%;
@@ -32,11 +27,14 @@
 
 .page__inline-size {
   inline-size: var(--page-width);
+}
+
+.header__inline-size {
   background-color: var(--color-bg);
 }
 
 .card__portion {
-  padding: 10px;
+  padding: 0 25px 25px 25px;
 }
 
 .header {
@@ -49,17 +47,19 @@
   font-family: var(--alt-font-family), sans-serif;
   padding: var(--header-padding);
   margin-block: var(--header-margin-block);
+  max-height: clamp(20.188rem, 19.285rem + 3.85vw, 22.75rem);
 }
 
 .heading {
   font-size: var(--header-heading);
   text-transform: uppercase;
-  margin-block-end: var(--header-title-margin-block-end);
+  /* margin-block-end: var(--header-title-margin-block-end); */
 }
 
 .subheading {
   font-size: var(--header-subheading);
   text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .content {
@@ -167,6 +167,7 @@
   mix-blend-mode: difference;
   color: #fff;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 .button {
@@ -230,9 +231,11 @@
   display: flex;
   flex-direction: column;
   inline-size: var(--save-button-inline-size);
-  padding: 15px 17px;
+  padding: 15px 20px;
   margin-block: 50px 100px;
   margin-inline: auto;
+  gap: 8px;
+  box-sizing: border-box;
 }
 
 .button-save__content {
@@ -246,6 +249,7 @@
   display: flex;
   justify-content: end;
   gap: 4px;
+  margin-top: 25px;
 }
 
 .button-save__content svg {
@@ -294,6 +298,7 @@
   line-height: 150%;
   text-transform: uppercase;
   display: block;
+  margin: 0;
 }
 
 .dialog__button {

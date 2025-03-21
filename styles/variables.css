@@ -14,11 +14,11 @@
 --card-paragraph-margin-block-end: 27px;
 --card-margin-block-end: 50px;
 --card-content-padding: 25px;
---header-padding: clamp(7.5rem, 7.323rem + 0.751vw, 8rem) 0;
---header-margin-block: 100px;
+--header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0; 
+--header-margin-block: 98px;
 --header-heading: clamp(3.063rem, 2.712rem + 1.5vw, 4.063rem);
 --header-title-margin-block-end: 20px;
---header-subheading: clamp(0.875rem, 0.676rem + 0.845vw, 1.437rem);
+--header-subheading: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
 --save-button-inline-size: clamp(19.125rem, 18.486rem + 2.723vw, 20.937rem);
 --heart-main-color: #ff0000;
 --heart-contour-color: #000;
