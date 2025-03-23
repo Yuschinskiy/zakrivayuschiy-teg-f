@@ -71,8 +71,8 @@
 
 .watermark {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 23px;
+  right: 11px;
   mix-blend-mode: hard-light;
   font-family: var(--alt-font-family), sans-serif;
   font-size: 14px;
@@ -318,6 +318,11 @@
 
   .button-save {
     flex-direction: row;
+  }
+
+  .watermark {
+    top: 25px;
+    right: 25px;
   }
 }
 
