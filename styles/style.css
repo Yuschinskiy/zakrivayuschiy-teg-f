@@ -47,7 +47,7 @@
   font-family: var(--alt-font-family), sans-serif;
   padding: var(--header-padding);
   margin-block: var(--header-margin-block);
-  max-height: clamp(20.188rem, 19.285rem + 3.85vw, 22.75rem);
+  max-height: clamp(20.188rem, 19.197rem + 4.23vw, 23rem);
 }
 
 .heading {
@@ -99,6 +99,7 @@
 
 .card__text {
   font-size: var(--main-font-size);
+  line-height: 21px;
 }
 
 .content__cards-list-item:not(:last-of-type) {
@@ -108,8 +109,8 @@
 .card__title {
   font-size: var(--card-font-size);
   font-variation-settings: "wght" var(--font-weight-bold);
-  padding: 3.5px 10px 5.5px;
-  line-height: 1.21;
+  padding: 3px 24px 3px 10px;
+  line-height: 22px;
 }
 
 .card__content {
@@ -314,7 +315,7 @@
 
 @media (min-width: 1440px) {
   .card__title {
-    padding: 5px 10px 4px;
+    padding: 3px 10px 8px;
   }
 
   .svgfloppy {

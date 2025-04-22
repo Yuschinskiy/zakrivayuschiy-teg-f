@@ -9,7 +9,7 @@
 --color-bg: rgba(255, 255, 255, 1);
 --color-main: rgba(0, 0, 0, 1);
 --text-stroke-color: #fff;
---page-width: clamp(23.063rem, 15.948rem + 30.52vw, 43.375rem);
+--page-width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
 --card-font-size: 1.125rem;
 --card-paragraph-margin-block-end: 27px;
 --card-margin-block-end: 50px;
